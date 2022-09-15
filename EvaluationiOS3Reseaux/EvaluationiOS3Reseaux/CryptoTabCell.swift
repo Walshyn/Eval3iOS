@@ -21,27 +21,34 @@ class CryptoTabCell: UITableViewCell {
     
     func setup(crypto: Crypto) {
         
-        var priceString = crypto.priceUsd
-        var priceDouble = Double(priceString)
-        formattingPrice(price: priceDouble!)
+        let priceString = crypto.priceUsd
+        let priceDouble = Double(priceString)
         
-        var percentString = crypto.changePercent24Hr
-        var percentDouble = Double(percentString)
-        formattingPrice(price: percentDouble!)
+        let percentString = crypto.changePercent24Hr
+        let percentDouble = Double(percentString)
         
         rankLab.text = crypto.rank
-        changeLab.text = String(format:"%.2f $", priceDouble!)
+        changeLab.text = formattingPrice(price: priceDouble!)
         nameLab.text = crypto.name
-        percentLab.text = String(format: "%.2f %", percentDouble!)
+        percentLab.text = formattingPercent(percent: percentDouble!)
     }
     
-    func formattingPrice(price: Double){
-        let price: Double = 12.75311
+    func formattingPrice(price: Double) -> String?{
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.currencyCode = "USD"
         
         let formattedPrice = formatter.string(from: price as NSNumber)
+        return formattedPrice
+    }
+    
+    func formattingPercent(percent: Double) -> String?{
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .percent
+        
+        let formattedPercent = formatter.string(from: percent as NSNumber)
+        return formattedPercent
     }
 }

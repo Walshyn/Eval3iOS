@@ -13,5 +13,5 @@ struct LogosData: Codable {
 
 struct Logos: Codable {
     var name: String
-    var icon: String
+    var icon: String?
 }

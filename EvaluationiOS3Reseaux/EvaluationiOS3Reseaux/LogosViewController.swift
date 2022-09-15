@@ -16,6 +16,22 @@ class LogosViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        logosTableView.dataSource = self
+        logosTableView.register(UINib(nibName: CryptosLogosCell.identifier, bundle: .main), forCellReuseIdentifier: CryptosLogosCell.identifier)
+        
+        
+        apiService.fetchLogosLessPro { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let logos):
+                self.logos = logos.coins
+                self.logosTableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
 
@@ -31,9 +47,9 @@ extension LogosViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CryptosLogosCell.identifier, for: indexPath) as? CryptosLogosCell
         else {
-            fatalError("Unable to dequeue CryptoTabCell")
+            fatalError("Unable to dequeue CryptosLogosCell")
         }
-        cell.setup(logo: logos[indexPath.row])
+        cell.setup(logos: logos[indexPath.row])
         return cell
     }
 }
