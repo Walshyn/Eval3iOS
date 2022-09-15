@@ -44,20 +44,7 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
-        formattingPrice()
     }
-
-    func formattingPrice(){
-        let price: Double = 12.75311
-        
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        
-        let formattedPrice = formatter.string(from: price as NSNumber)
-    }
-
-    
    
 }
 

@@ -24,6 +24,18 @@ struct ApiServiceImpl: ApiService {
             })
     }
     
+    func fetchLogos(completion: @escaping (Swift.Result<[Logos], AFError>) -> Void) {
+        checkNetwork(
+            success: {
+                let apiURL = URL(string: "https://api.coinstats.app/public/v1/coins?skip=0&limit=50&currency=EUR")!
+                AF.request(apiURL).responseDecodable(of: [Logos].self) {
+                    completion($0.result)}
+            },
+            failure: {
+                print("No network")
+            })
+    }
+    
     func fetchCryptosLessPro(completion: @escaping (Result<CryptoData, Error>) -> Void) {
         checkNetwork (
         success: {

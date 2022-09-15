@@ -58,11 +58,11 @@
             </objects>
             <point key="canvasLocation" x="116.92307692307692" y="3.5545023696682461"/>
         </scene>
-        <!--Item-->
+        <!--CryptoLive-->
         <scene sceneID="oED-Py-5Do">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="asH-xz-1iZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="s1R-k3-DGe"/>
+                    <tabBarItem key="tabBarItem" title="CryptoLive" image="coloncurrencysign.circle.fill" catalog="system" id="s1R-k3-DGe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="56R-ns-f5u">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -77,27 +77,42 @@
             </objects>
             <point key="canvasLocation" x="1022" y="-414"/>
         </scene>
-        <!--View Controller-->
+        <!--Logos View Controller-->
         <scene sceneID="2aC-7a-hOR">
             <objects>
-                <viewController id="weP-Ta-BDl" sceneMemberID="viewController">
+                <viewController id="weP-Ta-BDl" customClass="LogosViewController" customModule="EvaluationiOS3Reseaux" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w0s-Fd-OwM">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qTg-jn-rIU">
+                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rt8-00-gWv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rt8-00-gWv" firstAttribute="trailing" secondItem="qTg-jn-rIU" secondAttribute="trailing" id="2MJ-uB-s0h"/>
+                            <constraint firstItem="qTg-jn-rIU" firstAttribute="leading" secondItem="rt8-00-gWv" secondAttribute="leading" id="Al5-la-mXe"/>
+                            <constraint firstItem="qTg-jn-rIU" firstAttribute="top" secondItem="rt8-00-gWv" secondAttribute="top" id="YNY-F1-9bo"/>
+                            <constraint firstItem="rt8-00-gWv" firstAttribute="bottom" secondItem="qTg-jn-rIU" secondAttribute="bottom" id="YnO-nc-kRg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zUw-uY-lAV"/>
+                    <connections>
+                        <outlet property="logosTableView" destination="qTg-jn-rIU" id="Xmd-xI-FAi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jc4-nY-Aiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1917" y="363"/>
         </scene>
-        <!--Item-->
+        <!--Cryptos-->
         <scene sceneID="qIR-zr-MgY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J2y-xL-Gbf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="o8a-PP-jSy"/>
+                    <tabBarItem key="tabBarItem" title="Cryptos" image="dollarsign.square.fill" catalog="system" id="o8a-PP-jSy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="R27-wk-cJL">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -129,6 +144,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="coloncurrencysign.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="dollarsign.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

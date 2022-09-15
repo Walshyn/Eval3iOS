@@ -16,12 +16,32 @@ class CryptoTabCell: UITableViewCell {
     
     override class func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     func setup(crypto: Crypto) {
+        
+        var priceString = crypto.priceUsd
+        var priceDouble = Double(priceString)
+        formattingPrice(price: priceDouble!)
+        
+        var percentString = crypto.changePercent24Hr
+        var percentDouble = Double(percentString)
+        formattingPrice(price: percentDouble!)
+        
         rankLab.text = crypto.rank
-        changeLab.text = crypto.priceUsd
+        changeLab.text = String(format:"%.2f $", priceDouble!)
         nameLab.text = crypto.name
-        percentLab.text = crypto.changePercent24Hr
+        percentLab.text = String(format: "%.2f %", percentDouble!)
+    }
+    
+    func formattingPrice(price: Double){
+        let price: Double = 12.75311
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = "USD"
+        
+        let formattedPrice = formatter.string(from: price as NSNumber)
     }
 }

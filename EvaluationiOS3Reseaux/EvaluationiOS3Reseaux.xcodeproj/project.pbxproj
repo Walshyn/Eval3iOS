@@ -19,6 +19,10 @@
 		2D3E9C1928D1F256006B6F08 /* CryptoTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3E9C1728D1F256006B6F08 /* CryptoTabCell.xib */; };
 		2D3E9C1C28D1FADD006B6F08 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E9C1B28D1FADD006B6F08 /* ApiService.swift */; };
 		2D3E9C1E28D1FAE9006B6F08 /* ApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E9C1D28D1FAE9006B6F08 /* ApiServiceImpl.swift */; };
+		2DFB105B28D3097B00DECA09 /* CryptosLogosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB105928D3097B00DECA09 /* CryptosLogosCell.swift */; };
+		2DFB105C28D3097B00DECA09 /* CryptosLogosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFB105A28D3097B00DECA09 /* CryptosLogosCell.xib */; };
+		2DFB105E28D30A6500DECA09 /* CryptoLogos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB105D28D30A6500DECA09 /* CryptoLogos.swift */; };
+		2DFB106028D30CE300DECA09 /* LogosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB105F28D30CE300DECA09 /* LogosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		2D3E9C1728D1F256006B6F08 /* CryptoTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptoTabCell.xib; sourceTree = "<group>"; };
 		2D3E9C1B28D1FADD006B6F08 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		2D3E9C1D28D1FAE9006B6F08 /* ApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImpl.swift; sourceTree = "<group>"; };
+		2DFB105928D3097B00DECA09 /* CryptosLogosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptosLogosCell.swift; sourceTree = "<group>"; };
+		2DFB105A28D3097B00DECA09 /* CryptosLogosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptosLogosCell.xib; sourceTree = "<group>"; };
+		2DFB105D28D30A6500DECA09 /* CryptoLogos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoLogos.swift; sourceTree = "<group>"; };
+		2DFB105F28D30CE300DECA09 /* LogosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,9 @@
 				2D3E9C0A28D1ECA4006B6F08 /* Info.plist */,
 				2D3E9C1628D1F256006B6F08 /* CryptoTabCell.swift */,
 				2D3E9C1728D1F256006B6F08 /* CryptoTabCell.xib */,
+				2DFB105F28D30CE300DECA09 /* LogosViewController.swift */,
+				2DFB105928D3097B00DECA09 /* CryptosLogosCell.swift */,
+				2DFB105A28D3097B00DECA09 /* CryptosLogosCell.xib */,
 			);
 			path = EvaluationiOS3Reseaux;
 			sourceTree = "<group>";
@@ -87,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				2D3E9C1428D1EDE7006B6F08 /* Crypto.swift */,
+				2DFB105D28D30A6500DECA09 /* CryptoLogos.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFB105C28D3097B00DECA09 /* CryptosLogosCell.xib in Resources */,
 				2D3E9C0928D1ECA4006B6F08 /* LaunchScreen.storyboard in Resources */,
 				2D3E9C0628D1ECA4006B6F08 /* Assets.xcassets in Resources */,
 				2D3E9C1928D1F256006B6F08 /* CryptoTabCell.xib in Resources */,
@@ -179,12 +192,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3E9C1528D1EDE7006B6F08 /* Crypto.swift in Sources */,
+				2DFB105B28D3097B00DECA09 /* CryptosLogosCell.swift in Sources */,
 				2D3E9C0128D1ECA1006B6F08 /* ViewController.swift in Sources */,
 				2D3E9C1E28D1FAE9006B6F08 /* ApiServiceImpl.swift in Sources */,
+				2DFB105E28D30A6500DECA09 /* CryptoLogos.swift in Sources */,
 				2D3E9C1C28D1FADD006B6F08 /* ApiService.swift in Sources */,
 				2D3E9BFD28D1ECA1006B6F08 /* AppDelegate.swift in Sources */,
 				2D3E9BFF28D1ECA1006B6F08 /* SceneDelegate.swift in Sources */,
 				2D3E9C1828D1F256006B6F08 /* CryptoTabCell.swift in Sources */,
+				2DFB106028D30CE300DECA09 /* LogosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
